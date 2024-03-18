@@ -4,10 +4,16 @@ const {width} = Dimensions.get("window");
 const styles = StyleSheet.create({
     favorite:{
         width:40,
-        backgroundColor:"red",
+        
     },
     favoriteView:{
-        
+        width:58,
+        height:58,
+        backgroundColor:"red",
+    },
+    favoriteImage:{
+        width:48,
+        height:48,
     }
 })
 

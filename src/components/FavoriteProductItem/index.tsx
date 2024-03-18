@@ -10,7 +10,7 @@ export default function index({product}:productprops){
     return(
         <TouchableOpacity>
             <View style={styles.favoriteView}>
-                <Image source={{uri:product.image}}/>
+                <Image source={{uri:product.image}} resizeMode="stretch" style={styles.favoriteImage}/>
             </View>
         </TouchableOpacity>
     )
