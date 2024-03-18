@@ -4,7 +4,7 @@ import styles from "./styles";
 import {AntDesign} from "@expo/vector-icons";
 import Products from "../../../assets/products";
 import { Product } from "../../models/index";
-
+import FavoriteProductItem from "../../components/FavoriteProductItem";
 export default function index(){
     const[products,setProduct] = useState<Product[]>([]);
     useEffect(()=>{
@@ -27,11 +27,7 @@ export default function index(){
             bounces={true}
             horizontal={true}
             >
-                {products.map((item)=>{
-                    return <Text>
-                        {item.brand}
-                    </Text>
-                })}
+                {products.map((item)=>{return <FavoriteProductItem key={item.id} product={item}/>})}
             </ScrollView>
         </View>
     )
