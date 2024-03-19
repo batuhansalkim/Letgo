@@ -12,6 +12,9 @@ export default function index({product}:productprops){
         <TouchableOpacity style={styles.favorite}>
             <View style={styles.favoriteView}>
                 <Image source={{uri:product.image}} resizeMode="stretch" style={styles.favoriteImage}/>
+                <View style={styles.labeledFav}>
+                    <Text style={styles.labeledFavText}>Öne çıkanlar</Text>
+                </View>
                 <TouchableOpacity>
                     <AntDesign style={{position:"absolute",right:4,bottom:5}} name="heart" size={24} color="white"/>
                 </TouchableOpacity>
