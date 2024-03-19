@@ -3,17 +3,18 @@ import { Dimensions,StyleSheet } from "react-native";
 const {width} = Dimensions.get("window");
 const styles = StyleSheet.create({
     favorite:{
-        width:40,
+        width:width*0.3,
         
     },
     favoriteView:{
-        width:58,
-        height:58,
-        backgroundColor:"red",
+        width:width*0.26,
+        height:width*0.26,
+        // backgroundColor:"red",
     },
     favoriteImage:{
-        width:48,
-        height:48,
+        width:width*0.26,
+        height:width*0.26,
+        borderRadius:10,
     }
 })
 

@@ -11,6 +11,7 @@ const styles = StyleSheet.create({
         flexDirection:"row",
         // backgroundColor:"red",
         alignItems:"center",
+        marginBottom:12,
     },
     topicTitle:{
         fontWeight:"bold",
