@@ -5,6 +5,7 @@ const styles = StyleSheet.create({
     productContainer:{
         width:"96%",
         marginLeft:"4%",
+        
     },
     titleProducts:{
         justifyContent:"space-between",
@@ -12,6 +13,7 @@ const styles = StyleSheet.create({
         // backgroundColor:"red",
         alignItems:"center",
         marginBottom:12,
+        marginRight:"3%",
     },
     topicTitle:{
         fontWeight:"bold",
@@ -25,7 +27,8 @@ const styles = StyleSheet.create({
     detailContainr:{
         flexDirection:"row",
         alignItems:"center",
-    }
+    },
+    
 })
 
 export default styles;

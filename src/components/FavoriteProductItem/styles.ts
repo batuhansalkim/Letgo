@@ -28,6 +28,20 @@ const styles = StyleSheet.create({
     labeledFavText:{
         fontSize:9,
         fontWeight:"500"
+    },
+    main:{
+        width:width*0.47,
+        // borderWidth:5,
+        // borderColor:"red",
+    },
+    mainView:{
+        width:width*0.43,
+        height:width*0.43,
+    },
+    mainImg:{
+        width:width*0.43,
+        height:width*0.43,
+        borderRadius:12,
     }
 })
 

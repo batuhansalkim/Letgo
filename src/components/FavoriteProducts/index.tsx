@@ -18,7 +18,7 @@ export default function index(){
                 <Text style={styles.topicTitle}>Vitrin İlanları</Text>
                 <View style={styles.detailContainr}>
                     <Text style={styles.detailTitle}>Hepsini gör</Text>
-                    <AntDesign name="right" size={20} color="#F24E61"/>
+                    <AntDesign name="right" size={18} color="#F24E61"/>
                 </View>
             </View>
 
@@ -27,7 +27,7 @@ export default function index(){
             bounces={true}
             horizontal={true}
             >
-                {products.map((item)=>{return <FavoriteProductItem key={item.id} product={item}/>})}
+                {products.map((item)=>{return <FavoriteProductItem prodType="Favorite" key={item.id} product={item}/>})}
             </ScrollView>
         </View>
     )
