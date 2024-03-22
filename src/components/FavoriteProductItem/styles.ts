@@ -30,17 +30,20 @@ const styles = StyleSheet.create({
         fontWeight:"500"
     },
     main:{
-        width:width*0.47,
+        width:width*0.45,
+        height:width*0.45,
+        alignItems:"center",
+        // backgroundColor:"red",
         // borderWidth:5,
         // borderColor:"red",
     },
     mainView:{
-        width:width*0.43,
-        height:width*0.43,
+        width:width*0.42,
+        height:width*0.42,
     },
     mainImg:{
-        width:width*0.43,
-        height:width*0.43,
+        width:width*0.42,
+        height:width*0.42,
         borderRadius:12,
     }
 })

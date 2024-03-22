@@ -26,6 +26,7 @@ export default function index(){
             <ScrollView
             bounces={true}
             horizontal={true}
+            showsHorizontalScrollIndicator={false}
             >
                 {products.map((item)=>{return <FavoriteProductItem prodType="Favorite" key={item.id} product={item}/>})}
             </ScrollView>

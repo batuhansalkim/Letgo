@@ -21,6 +21,13 @@ const styles = StyleSheet.create({
         fontWeight:"bold",
         fontSize:14,
         color:"#F24E61",
+    },
+    listContainer:{
+        flexDirection:"row",
+        alignItems:"flex-start",
+        flexWrap:"wrap",
+        backgroundColor:"white",
+        width:"100%",
     }
 
 })

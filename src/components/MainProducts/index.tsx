@@ -21,7 +21,7 @@ const MainProducts = ({mainProducts,}:mainProductsProps) => {
         </View>
       </View>
 
-      <View>
+      <View style={styles.listContainer}>
          {
             mainProducts.map((item,index)=>{
                 return(
