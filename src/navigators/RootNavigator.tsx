@@ -3,6 +3,9 @@ import {createBottomTabNavigator} from "@react-navigation/bottom-tabs";
 import { View,Text } from "react-native";
 import HomeNavigator from "./HomeNavigator";
 import {Foundation,Ionicons,MaterialCommunityIcons,AntDesign} from "@expo/vector-icons";
+import BildirimNavigator from "./BildirimNavigator";
+import MesajNavigator from "./MesajNavigator";
+import IlanlarNavigator from "./IlanlarNavigator";
 
 const Tab = createBottomTabNavigator();
 
@@ -31,7 +34,7 @@ function RootNavigation(){
             }}
             />
             <Tab.Screen
-            component={HomeNavigator}
+            component={BildirimNavigator}
                 name="Bildirimler"
                 options={{
                     tabBarIcon:({color})=>(
@@ -53,7 +56,7 @@ function RootNavigation(){
                 }}
             />
             <Tab.Screen
-            component={HomeNavigator}
+            component={MesajNavigator}
                 name="Sohbet"
                 options={{
                     tabBarIcon:({color})=>(
@@ -62,7 +65,7 @@ function RootNavigation(){
                 }}
             />
             <Tab.Screen
-            component={HomeNavigator}
+            component={IlanlarNavigator}
                 name="İlanlarım"
                 options={{
                     tabBarIcon:({color})=>(
