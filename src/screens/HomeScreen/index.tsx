@@ -5,6 +5,7 @@ import { Product } from "../../models/index";
 import FavoriteProducts from "../../components/FavoriteProducts";
 import MainProducts from "../../components/MainProducts";
 import CategoryFilter from "../../components/CategoryFilter";
+import MessageNotification from "../../components/MessageNotification";
 
 export default function HomeScreen(){
     const[products,setProduct] = useState<Product[]>([]);
@@ -13,6 +14,7 @@ export default function HomeScreen(){
     },[]);
     return(
         <ScrollView style={{backgroundColor:"white",height:"100%"}}>
+            <MessageNotification/>
             <CategoryFilter/>
             <FavoriteProducts/>
             <MainProducts mainProducts={products}/>
