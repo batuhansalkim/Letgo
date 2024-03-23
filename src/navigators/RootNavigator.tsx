@@ -2,6 +2,7 @@ import React from "react";
 import {createBottomTabNavigator} from "@react-navigation/bottom-tabs";
 import { View,Text } from "react-native";
 import HomeNavigator from "./HomeNavigator";
+import {Foundation,Ionicons,MaterialCommunityIcons,AntDesign} from "@expo/vector-icons";
 
 const Tab = createBottomTabNavigator();
 
@@ -20,7 +21,55 @@ function RootNavigation(){
                 }
             }}
         >
-            <Tab.Screen name="Anasayfa" component={HomeNavigator}/>
+            <Tab.Screen 
+            name="Anasayfa" 
+            component={HomeNavigator}
+            options={{
+                tabBarIcon:({color})=>(
+                    <Foundation name="home" size={24} color={color}/>
+                )
+            }}
+            />
+            <Tab.Screen
+            component={HomeNavigator}
+                name="Bildirimler"
+                options={{
+                    tabBarIcon:({color})=>(
+                        <View>
+                            <Ionicons color={color} size={24} name="notifications"/>
+                            <View style={{
+                                position:"absolute",
+                                top:-4,
+                                right:-10,
+                                width:16,
+                                height:16,
+                                borderRadius:8,backgroundColor:"#F24E61",flexDirection:"row",alignItems:"center",justifyContent:"center"}}>
+                                <Text style={{fontSize:12,color:"white"}}>
+                                    2
+                                </Text>
+                            </View>
+                        </View>
+                    )
+                }}
+            />
+            <Tab.Screen
+            component={HomeNavigator}
+                name="Sohbet"
+                options={{
+                    tabBarIcon:({color})=>(
+                        <MaterialCommunityIcons name="message-processing" size={24} color={color}/>
+                    )
+                }}
+            />
+            <Tab.Screen
+            component={HomeNavigator}
+                name="İlanlarım"
+                options={{
+                    tabBarIcon:({color})=>(
+                        <AntDesign size={24} color={color} name="appstore1"/>
+                    )
+                }}
+            />
         </Tab.Navigator>
     )
 }
