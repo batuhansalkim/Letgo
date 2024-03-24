@@ -5,12 +5,13 @@ const styles = StyleSheet.create({
         width:"92%",
         // backgroundColor:"red",
         marginHorizontal:"4%",
+        
     },
     titleProducts:{
         flexDirection:"row",
         justifyContent:"space-between",
         alignItems:"center",
-        marginBottom:10,
+        marginBottom:15,
         marginTop:20,
     },
     topicTitle:{
@@ -28,6 +29,11 @@ const styles = StyleSheet.create({
         flexWrap:"wrap",
         backgroundColor:"white",
         width:"100%",
+    },
+    topicTitlefiltered:{
+        fontWeight:"bold",
+        fontSize:18,
+        // color:"red",
     }
 
 })

@@ -17,7 +17,7 @@ export default function HomeScreen(){
             <MessageNotification/>
             <CategoryFilter/>
             <FavoriteProducts/>
-            <MainProducts mainProducts={products}/>
+            <MainProducts header={"Söğüt"} filtered={false} mainProducts={products}/>
         </ScrollView>
     )
 }

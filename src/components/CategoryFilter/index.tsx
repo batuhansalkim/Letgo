@@ -3,10 +3,11 @@ import { View, Text, ScrollView, TouchableOpacity, Image } from "react-native";
 import categoriesData from "../../../assets/categories";
 import styles from "./styles";
 import { Category } from "../../models";
+import {useNavigation} from "@react-navigation/native";
 
 export default function CategoryFilter() {
     const [categories, setCategories] = useState<Category[]>([]);
-
+    const navigation = useNavigation();
     useEffect(() => {
         setCategories(categoriesData);
         return () => {
@@ -22,7 +23,7 @@ export default function CategoryFilter() {
             style={styles.scrollStyle}
         >
             {categories.map((item: Category) => (
-                <TouchableOpacity style={styles.center}>
+                <TouchableOpacity onPress={()=>navigation.navigate("CategoryFiltering")}  style={styles.center}>
                     <Image source={item.src} style={styles.image}/>
                     <Text style={{fontSize:11,color:"#767575",fontWeight:"bold"}}>{item.name}</Text>
                 </TouchableOpacity>

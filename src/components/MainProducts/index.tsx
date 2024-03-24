@@ -7,18 +7,22 @@ import FavoriteProductItem from "../../components/FavoriteProductItem";
 
 type mainProductsProps={
     mainProducts:Product[];
+    header:string;
+    filtered:boolean;
 }
-const MainProducts = ({mainProducts,}:mainProductsProps) => {
+const MainProducts = ({mainProducts,header,filtered}:mainProductsProps) => {
   return (
     <View style={styles.productsContainer}>
       <View style={styles.titleProducts}>
         
-        <Text style={styles.topicTitle}>Söğüt</Text>
+        <Text style={filtered ? styles.topicTitlefiltered : styles.topicTitle}>{header}</Text>
         
-        <View style={{flexDirection:"row",alignItems:"center"}}>
+        {!filtered &&
+          <View style={{flexDirection:"row",alignItems:"center"}}>
             <Text style={styles.detailTitle}>Düzelt</Text>
             <AntDesign name='right' size={18} color="#F24E61"/>
         </View>
+        }
       </View>
 
       <View style={styles.listContainer}>

@@ -1,26 +1,49 @@
 import React from "react";
 import {createBottomTabNavigator} from "@react-navigation/bottom-tabs";
-import { View,Text } from "react-native";
+import { View,Text,TouchableOpacity } from "react-native";
 import HomeNavigator from "./HomeNavigator";
-import {Foundation,Ionicons,MaterialCommunityIcons,AntDesign} from "@expo/vector-icons";
+import {Foundation,Ionicons,MaterialCommunityIcons,AntDesign,FontAwesome} from "@expo/vector-icons";
 import BildirimNavigator from "./BildirimNavigator";
 import MesajNavigator from "./MesajNavigator";
 import IlanlarNavigator from "./IlanlarNavigator";
 
 const Tab = createBottomTabNavigator();
 
+
 function RootNavigation(){
+    
+    const CustomTabBarButton=({children})=>{
+        return(
+            <TouchableOpacity style={{
+                width:70,
+                height:70,
+                backgroundColor:"#F23F5A",
+                flexDirection:"column",
+                justifyContent:"center",
+                alignItems:"center",
+                borderRadius:35,
+                borderWidth:5,
+                borderColor:"white",
+                marginTop:-18,
+                
+            }}>
+                <FontAwesome name="camera" size={20} color="white"/>
+                <Text style={{color:"white",marginTop:2,fontWeight:"600"}}>Sat</Text>
+            </TouchableOpacity>
+        )
+    }
+
     return(
         <Tab.Navigator 
             initialRouteName="Anasayfa"
             screenOptions={{
                 tabBarHideOnKeyboard:true,
-                tabBarShowLabel:false,
+                tabBarShowLabel:true,
                 tabBarActiveTintColor:"#F24E61",
                 tabBarInactiveTintColor:"#959595",
                 headerShown:false,
                 tabBarStyle:{
-                    height:80,
+                    height:55,
                 }
             }}
         >
@@ -54,6 +77,13 @@ function RootNavigation(){
                         </View>
                     )
                 }}
+            />
+            <Tab.Screen
+            name="Sat"
+            component={HomeNavigator}
+            options={{
+                tabBarButton:(props)=> <CustomTabBarButton {...props}/>
+            }}
             />
             <Tab.Screen
             component={MesajNavigator}
