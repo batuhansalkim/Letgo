@@ -6,6 +6,7 @@ import {Foundation,Ionicons,MaterialCommunityIcons,AntDesign,FontAwesome} from "
 import BildirimNavigator from "./BildirimNavigator";
 import MesajNavigator from "./MesajNavigator";
 import IlanlarNavigator from "./IlanlarNavigator";
+import PostNavigator from "./PostNavigator";
 
 const Tab = createBottomTabNavigator();
 
@@ -95,7 +96,7 @@ function RootNavigation(){
                 }}
             />
             <Tab.Screen
-            component={IlanlarNavigator}
+            component={PostNavigator}
                 name="İlanlarım"
                 options={{
                     tabBarIcon:({color})=>(
