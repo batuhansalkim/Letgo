@@ -16,15 +16,16 @@ export default function PostNavigator(){
             <Stack.Screen name="Home" component={PostScreen} options={{
                 headerStyle:{
                     backgroundColor:"#F1F1F1",
+                    
                 },
                 headerTitle:()=>(
-                    <Text style={{fontWeight:"bold", fontSize:15,backgroundColor:"red",}}>İlanlarım</Text>
+                    <Text style={{fontWeight:"bold", fontSize:15,width:90,marginLeft:94}}>İlanlarım</Text>
                 ),
                 headerLeft:()=>(
                     <MaterialCommunityIcons style={{marginLeft:15,}} name="lightbulb-on" size={24} color="#949494"/>
                 ),
                 headerRight:()=>(
-                    <Ionicons style={{marginRight:15,}} name="ios-arrow-redo-sharp" size={24} color="#919191"/>
+                    <Ionicons style={{marginRight:15,}} name="arrow-redo" size={24} color="#919191"/>
                 )
                
             }}
