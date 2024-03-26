@@ -17,11 +17,11 @@ const MainProducts = ({mainProducts,header,filtered}:mainProductsProps) => {
         
         <Text style={filtered ? styles.topicTitlefiltered : styles.topicTitle}>{header}</Text>
         
-        {!filtered &&
-          <View style={{flexDirection:"row",alignItems:"center"}}>
+        {!filtered ?(
+           <View style={{flexDirection:"row",alignItems:"center"}}>
             <Text style={styles.detailTitle}>Düzelt</Text>
             <AntDesign name='right' size={18} color="#F24E61"/>
-        </View>
+        </View>):null
         }
       </View>
 
