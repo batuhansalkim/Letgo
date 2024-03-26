@@ -1,7 +1,8 @@
-import { View, Text,FlatList } from 'react-native'
+import { View,FlatList } from 'react-native'
 import React,{useState,useEffect} from 'react'
 import products from '../../../assets/products'
 import { Product } from '../../models'
+import FavoriteItem from "../../components/FavoriteItem";
 
 export default function index() {
 
@@ -17,7 +18,7 @@ export default function index() {
   return (
     <View style={{padding:13}}>
         <FlatList data={favoriteProducts} renderItem={({item,index})=>(
-            <Text>{item.name}</Text>
+            <FavoriteItem product={item}/>
         )}
             showsHorizontalScrollIndicator={false}
         />

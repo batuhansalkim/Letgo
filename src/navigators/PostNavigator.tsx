@@ -13,6 +13,7 @@ const Stack = createStackNavigator();
 export default function PostNavigator(){
     return(
         <Stack.Navigator>
+            
             <Stack.Screen name="Home" component={PostScreen} options={{
                 headerStyle:{
                     backgroundColor:"#F1F1F1",
