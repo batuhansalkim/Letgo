@@ -4,8 +4,9 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import {createStackNavigator} from "@react-navigation/stack";
 import HomeScreen from "../screens/HomeScreen";
 import CategoryFilterScreen from "../screens/CategoryFilterScreen/index";
-import {FontAwesome5} from "@expo/vector-icons";
+import {FontAwesome5,Ionicons,Entypo} from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
+import ProductDetailsScreen from "../screens/ProductDetailsScreen";
 
 const Stack = createStackNavigator();
 
@@ -48,7 +49,26 @@ export default function HomeNavigator(){
                 )
             }}
             />
-
+            <Stack.Screen
+                name="ProductDetails"
+                component={ProductDetailsScreen}
+                options={{
+                    headerTransparent:true,
+                    headerRight:()=>(
+                        <View style={{backgroundColor:"rgba(0,0,0,0.5)",height:36,width:36,flexDirection:"row",justifyContent:"center",alignItems:"center",borderRadius:18,marginRight:15}}>
+                            <Ionicons style={{marginRight:-3}} name="arrow-redo-sharp" size={24} color="#FEFDFC"/>
+                        </View>
+                    ),headerLeft:()=>(
+                        <TouchableOpacity style={{marginLeft:10,backgroundColor:"rgba(0,0,0,0.5)",height:36,width:36,flexDirection:"row",alignItems:"center",borderRadius:18,justifyContent:"center"}}>
+                            <Entypo name="cross" size={28} color="#FEFDFC"/>
+                        </TouchableOpacity>
+                    ),headerTitle:()=>{
+                        return null;
+                    }
+                        
+                    
+                }}
+            />
             <Stack.Screen
                 name="CategoryFiltering"
                 component={CategoryFilterScreen}
