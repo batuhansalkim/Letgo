@@ -1,11 +1,15 @@
 import { View, Text,ScrollView } from 'react-native'
-import React from 'react'
-
-const index = () => {
+import React,{useState} from 'react'
+import { Product } from '../../models';
+import ImageCoursel from "../../components/ImageCarousel";
+import DetailsTextBox from "../../components/DetailsTextBox";
+const index = (props) => {
+  const [product,setProduct] = useState<Product>(props.route.params.product);
   return (
-    <View>
-      <Text>index</Text>
-    </View>
+    <ScrollView style={{flex:1,backgroundColor:"#fff"}}>
+      <ImageCoursel images={product.images}/>
+      <DetailsTextBox price={product.price} name={product.name} description={product.description}/>
+    </ScrollView>
   )
 }
 
