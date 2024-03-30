@@ -4,8 +4,12 @@ import React,{useState} from 'react'
 
 const {height,width} = Dimensions.get("window");
 
-const MessageBox(){
-  
+const MessageBox=({title}:{title:string})=>{
+  return(
+    <View style={{borderRadius:40,marginLeft:8,backgroundColor:"#FF3E55",alignItems:"center",justifyContent:"center",}}>      
+      <Text style={{paddingHorizontal:15,paddingVertical:8,color:"white"}}>{title}</Text>
+    </View>
+  )
 }
 const index = () => {
 
@@ -14,18 +18,23 @@ const index = () => {
 
 
   return (
-    <View style={{position:"absolute",bottom:0,width:"100%",height:height*0.15,backgroundColor:"white",shadowColor:"gray",shadowOpacity:0.3,
+    <View style={{position:"absolute",bottom:0,width:"100%",height:height*0.15,backgroundColor:"white",shadowColor:"gray",shadowOpacity:0.9,
     }}>
-      <ScrollView horizontal={true} bounces={true} showsHorizontalScrollIndicator={false}>
+      <ScrollView style={{marginTop:10}} horizontal={true} bounces={true} showsHorizontalScrollIndicator={false}>
         {messages.map((item,index)=>(
-          <Text key={index}>{item}</Text>
+          <MessageBox title={item}/>
         ))}
       </ScrollView>
 
-      <View>
-        <TextInput/>
-         <Text></Text>
+      <View style={{ flexDirection: "row", alignItems: "center", justifyContent: "space-between", padding: 10 }}>
+  <TextInput 
+    style={{ height: 35, backgroundColor: "#f5f5f5", borderRadius: 10, flex: 1,padding:10 }} 
+    onChangeText={setSearchValue} 
+    value={searchValue}
+  />
+  <Text style={{ fontWeight: "bold", color: "#FF3E55", marginLeft: 10 }}>Gönder</Text>
       </View>
+
     </View>
   )
 }

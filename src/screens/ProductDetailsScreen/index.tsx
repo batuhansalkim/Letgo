@@ -12,7 +12,7 @@ import SocialMedias from "../../components/SocialMedias/";
 const index = (props) => {
   const [product,setProduct] = useState<Product>(props.route.params.product);
   return (
-    <View style={{flex:1,}}>
+    <View style={{flex:1}}>
       <ScrollView style={{flex:1,backgroundColor:"#fff"}}>
       <ImageCoursel images={product.images}/>
       <View style={{paddingHorizontal:20,paddingVertical:14}}>

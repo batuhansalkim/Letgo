@@ -42,7 +42,7 @@ const index = () => {
             <Entypo name='dots-three-horizontal' size={22} color="white"/>
         </SocialMediaContainer>
     </View>
-    <View style={{marginTop:"6%",marginBottom:"11%",borderWidth:1.2,borderColor:"#FF3E55",height:44,flexDirection:"row",borderRadius:22,justifyContent:"center",alignItems:"center"}}>
+    <View style={{marginTop:"6%",marginBottom:"11%",borderWidth:1.2,borderColor:"#FF3E55",height:44,flexDirection:"row",borderRadius:22,justifyContent:"center",alignItems:"center",}}>
         <Text style={{fontSize:16,fontWeight:"bold",color:"#FF3E55"}}>İlanı Şikayet et</Text>
     </View>
     </View>
