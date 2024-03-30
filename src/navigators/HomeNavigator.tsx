@@ -5,7 +5,7 @@ import {createStackNavigator} from "@react-navigation/stack";
 import HomeScreen from "../screens/HomeScreen";
 import CategoryFilterScreen from "../screens/CategoryFilterScreen/index";
 import {FontAwesome5,Ionicons,Entypo} from "@expo/vector-icons";
-import { useNavigation } from "@react-navigation/native";
+import { useNavigation ,getFocusedRouteNameFromRoute} from "@react-navigation/native";
 import ProductDetailsScreen from "../screens/ProductDetailsScreen";
 
 const Stack = createStackNavigator();
@@ -39,8 +39,19 @@ const CategoryHeaderComponent=()=>{
     
 }
 
+function MyStack({navigation,route}){
+        
+    const tabHiddenRoutes = ["ProductDetails"];
 
-export default function HomeNavigator(){
+    React.useLayoutEffect(() => {
+        const routeName = getFocusedRouteNameFromRoute(route);
+        if(tabHiddenRoutes.includes(routeName)){
+          navigation.setOptions({tabBarStyle: {display:'none'}});
+        }else {
+            navigation.setOptions({tabBarStyle: {display:'true'}});
+        }
+    }, [navigation, route]);
+
     return(
         <Stack.Navigator>
             <Stack.Screen name="Home" component={HomeScreen} options={{
@@ -59,7 +70,7 @@ export default function HomeNavigator(){
                             <Ionicons style={{marginRight:-3}} name="arrow-redo-sharp" size={24} color="#FEFDFC"/>
                         </View>
                     ),headerLeft:()=>(
-                        <TouchableOpacity style={{marginLeft:10,backgroundColor:"rgba(0,0,0,0.5)",height:36,width:36,flexDirection:"row",alignItems:"center",borderRadius:18,justifyContent:"center"}}>
+                        <TouchableOpacity onPress={()=>navigation.goBack()} style={{marginLeft:10,backgroundColor:"rgba(0,0,0,0.5)",height:36,width:36,flexDirection:"row",alignItems:"center",borderRadius:18,justifyContent:"center"}}>
                             <Entypo name="cross" size={28} color="#FEFDFC"/>
                         </TouchableOpacity>
                     ),headerTitle:()=>{
@@ -81,3 +92,9 @@ export default function HomeNavigator(){
         </Stack.Navigator>
     )
 }  
+
+
+export default function HomeNavigator({navigation,route})
+{
+    return <MyStack navigation={navigation}  route={route}/>
+};
