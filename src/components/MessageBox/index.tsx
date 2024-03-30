@@ -18,7 +18,7 @@ const index = () => {
 
 
   return (
-    <View style={{position:"absolute",bottom:0,width:"100%",height:height*0.15,backgroundColor:"white",shadowColor:"gray",shadowOpacity:0.9,
+    <View style={{bottom:0,width:"100%",height:height*0.15,backgroundColor:"white",shadowColor:"gray",shadowOpacity:0.9,
     }}>
       <ScrollView style={{marginTop:10}} horizontal={true} bounces={true} showsHorizontalScrollIndicator={false}>
         {messages.map((item,index)=>(
@@ -26,13 +26,13 @@ const index = () => {
         ))}
       </ScrollView>
 
-      <View style={{ flexDirection: "row", alignItems: "center", justifyContent: "space-between", padding: 10 }}>
-  <TextInput 
-    style={{ height: 35, backgroundColor: "#f5f5f5", borderRadius: 10, flex: 1,padding:10 }} 
-    onChangeText={setSearchValue} 
-    value={searchValue}
-  />
-  <Text style={{ fontWeight: "bold", color: "#FF3E55", marginLeft: 10 }}>Gönder</Text>
+      <View style={{ flexDirection: "row", alignItems: "center", justifyContent: "space-between",padding: 10 }}>
+      <TextInput 
+      style={{ height: 35, backgroundColor: "#f5f5f5", borderRadius: 10, flex: 1,padding:10 ,marginTop:7}} 
+      onChangeText={setSearchValue} 
+      value={searchValue}
+      />
+      <Text style={{ fontWeight: "bold", color: "#FF3E55", marginLeft: 10 ,fontSize:16}}>Gönder</Text>
       </View>
 
     </View>

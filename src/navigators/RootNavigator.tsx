@@ -7,6 +7,7 @@ import BildirimNavigator from "./BildirimNavigator";
 import MesajNavigator from "./MesajNavigator";
 import IlanlarNavigator from "./IlanlarNavigator";
 import PostNavigator from "./PostNavigator";
+import SohbetNavigator from "./SohbetNavigator";
 
 const Tab = createBottomTabNavigator();
 
@@ -87,7 +88,7 @@ function RootNavigation(){
             }}
             />
             <Tab.Screen
-            component={MesajNavigator}
+            component={SohbetNavigator}
                 name="Sohbet"
                 options={{
                     tabBarIcon:({color})=>(
