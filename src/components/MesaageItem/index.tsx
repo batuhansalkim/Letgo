@@ -1,7 +1,7 @@
 import { View, Text,TouchableOpacity,Image,StyleSheet } from 'react-native'
 import React from 'react'
 import { Message } from '../../models'
-import { FontAwesome } from '@expo/vector-icons';
+import { FontAwesome,MaterialCommunityIcons } from '@expo/vector-icons';
 type MessageItemProps={
     item:Message
 }
@@ -28,14 +28,20 @@ const index = ({item}:MessageItemProps) => {
             </Text>
             {
                 item.situation=="Satıldı" ? (
-                    <View>
-                        <Text></Text>
+                    <View style={{flexDirection:"row",alignItems:"center",marginTop:5,marginLeft:10}}>
+                        <FontAwesome name='times-circle' size={16} color="#A0A0A0"/>
+                        <Text style={{paddingLeft:5,fontSize:15,color:"#777777"}}>Artık Mevcut Değil</Text>
                     </View>
                 ):(
-                    <View>
-                        <Text>
-                            
-                        </Text>
+                    <View style={{flexDirection:"row",marginLeft:10,alignItems:"center",marginTop:5}}>
+
+
+                        <View style={{flexDirection:"row",justifyContent:"center",alignItems:"center",backgroundColor:"red",width:17,height:17,borderRadius:10,}}>
+                            <FontAwesome style={{color:"white",}} name="usd" size={14}  />
+                        </View>
+
+
+                        <Text style={{paddingLeft:5,fontSize:15,color:"red",justifyContent:"center",alignItems:"center"}}>Satıldı</Text>
                     </View>
                 )
             }

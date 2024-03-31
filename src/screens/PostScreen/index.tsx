@@ -33,7 +33,7 @@ export default function PostScreen() {
                 <View style={{flexDirection:"row",justifyContent:"space-between",alignItems:"center",paddingHorizontal:5,marginBottom:15}}> 
                     {headerTexts.map((item,index)=>{
                         return(
-                            <View style={{paddingVertical:10,borderBottomWidth:index==0 ? 3:0,borderBottomColor:"#FF3E55"}}>
+                            <View style={{paddingVertical:10,borderBottomWidth:index==0 ? 3:0,borderBottomColor:"#FF3E55"}} key={index}>
                                 <Text style={{color:index==0?"#FF3E55":"#797979",fontWeight:index==0?"bold":"600",fontSize:15}}>{item}</Text>
                             </View>
                         )
