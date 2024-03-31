@@ -16,7 +16,7 @@ const SohbetNavigator = () => {
                     backgroundColor:"#F1F1F1"
                 },
                 headerTitle:()=>(
-                    <View style={{flexDirection:"row",alignItems:"center",justifyContent:"center",flex:1,marginLeft:115,borderBottomWidth: 1, borderBottomColor: "black"}}>
+                    <View style={{flexDirection:"row",alignItems:"center",justifyContent:"center",flex:1,marginLeft:115,}}>
                     <Text style={{fontWeight:"bold", fontSize:15,}}>Sohbet - Hepsi</Text>
                     </View>
                 ),
