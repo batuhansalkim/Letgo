@@ -5,10 +5,13 @@ import {AntDesign} from "@expo/vector-icons";
 import Products from "../../../assets/products";
 import { Product } from "../../models/index";
 import FavoriteProductItem from "../../components/FavoriteProductItem";
+
+
 export default function index(){
     const[products,setProduct] = useState<Product[]>([]);
-    useEffect(()=>{
+    useEffect(()=>{ //categoryFilter da retrn ile temizleme işlemi yaptık ama burada yapmadık sebebini pek anlayamamadım
         setProduct(Products);
+        
     },[]);
     console.log("The products batu",products);
     return(

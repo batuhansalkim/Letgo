@@ -11,6 +11,8 @@ import ProductDetailsScreen from "../screens/ProductDetailsScreen";
 const Stack = createStackNavigator();
 
 
+//üstteki kısım 
+
 const MainHeaderComponent=()=>{
     return(
         <SafeAreaView style={{flexDirection:"row",alignItems:"center",width:"90%",marginHorizontal:"5%",marginBottom:5}}>
@@ -24,7 +26,7 @@ const MainHeaderComponent=()=>{
     
 }
 
-
+//kategoriye tıkladığım zaman üst tarafta çıkan arama kısmı
 const CategoryHeaderComponent=()=>{
     const navigation =useNavigation();
     return(
@@ -82,7 +84,7 @@ function MyStack({navigation,route}){
                     
                 }}
             />
-            
+
             <Stack.Screen
                 name="CategoryFiltering"
                 component={CategoryFilterScreen}

@@ -12,6 +12,7 @@ function index(){
                 <MaterialCommunityIcons name="message-processing" size={24} color="#757575"/>
                 <Text style={{color:"white",fontSize:13,marginLeft:5}}>Mesaj bildirimlerini aç</Text>
             </View>
+            
             <Entypo style={{marginRight:8,}} color="#969696" size={24} name="chevron-right"/>
         </View>
     )
