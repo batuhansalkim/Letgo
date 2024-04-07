@@ -41,7 +41,7 @@ function RootNavigation(){
             screenOptions={{
                 tabBarHideOnKeyboard:true,
                 tabBarShowLabel:true,
-                tabBarActiveTintColor:"#F24E61",
+                tabBarActiveTintColor:"blue",
                 tabBarInactiveTintColor:"#959595",
                 headerShown:false,
                 tabBarStyle:{
