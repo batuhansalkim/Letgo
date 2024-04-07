@@ -39,6 +39,7 @@ const CategoryHeaderComponent=()=>{
     
 }
 
+
 function MyStack({navigation,route}){
         
     const tabHiddenRoutes = ["ProductDetails"];
@@ -60,6 +61,7 @@ function MyStack({navigation,route}){
                 )
             }}
             />
+
             <Stack.Screen
                 name="ProductDetails"
                 component={ProductDetailsScreen}
@@ -80,6 +82,7 @@ function MyStack({navigation,route}){
                     
                 }}
             />
+            
             <Stack.Screen
                 name="CategoryFiltering"
                 component={CategoryFilterScreen}
