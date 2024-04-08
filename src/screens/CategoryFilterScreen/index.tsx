@@ -9,7 +9,9 @@ import FilteringCategory from "../../components/FilteringCategory/index";
 
 function index(props){
     const[products,setProduct] = useState<Product[]>([]);
-    const [category,setCategory] = useState<Category>(props.route.params.category)
+
+    const [category,setCategory] = useState<Category>(props.route.params.category);
+    
     useEffect(()=>{
         setProduct(Products);
     },[]);

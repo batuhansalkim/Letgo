@@ -9,6 +9,8 @@ import MessageBox from "../../components/MessageBox";
 
 
 import SocialMedias from "../../components/SocialMedias/";
+
+
 const index = (props) => {
   const [product,setProduct] = useState<Product>(props.route.params.product);
   return (

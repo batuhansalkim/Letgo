@@ -40,6 +40,7 @@ const styles = StyleSheet.create({
     mainView:{
         width:width*0.42,
         height:width*0.42,
+        // backgroundColor:"blue"
     },
     mainImg:{
         width:width*0.42,
